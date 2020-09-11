@@ -87,8 +87,8 @@ pipeline {
             }
         }
         stage('Wait for deployment in DEV env') {
-	    steps {
-		echo 'wait for deployment in DEV env'
+	        steps {
+		        echo 'wait for deployment in DEV env'
                 script {
                     openshift.withCluster() {
                         openshift.withProject( "${DEV_PROJECT}" ) {
